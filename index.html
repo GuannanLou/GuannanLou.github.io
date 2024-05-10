@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Sorter</title>
+    <script>
+        function sortStrings() {
+            // Get the content from the left textarea
+            var inputText = document.getElementById('inputArea').value;
+            // Split the content into lines
+            var lines = inputText.split('\n');
+            // Sort the lines alphabetically
+            lines.sort();
+            // Join the sorted lines back into a single string
+            var sortedText = lines.join('\n');
+            // Set the sorted text to the right textarea
+            document.getElementById('outputArea').value = sortedText;
+        }
+    </script>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+        <textarea id="inputArea" style="width: 40%; height: 300px;"></textarea>
+        <textarea id="outputArea" style="width: 40%; height: 300px;"></textarea>
+    </div>
+    <div style="text-align: center; padding: 20px;">
+        <button onclick="sortStrings()">格式转换</button>
+    </div>
+</body>
+</html>
